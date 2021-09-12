@@ -46,6 +46,18 @@ All the datastes used in our work are available at [Google Drive](https://drive.
 	     |--- vocab.txt
 	```
 
+* Download json files from the above data links and put them into the directory **json_data** like this:
+
+	```
+	--- json_data
+	  |
+	  |--- samsum
+	  |
+      |--- adsc
+      |
+      ...
+	```
+
 * Pre-process dialogue summary datasets (e.g., the SAMSum training data).
 
     ```
@@ -77,19 +89,19 @@ All the datastes used in our work are available at [Google Drive](https://drive.
 
 * Test DAMS.
 
-    * Zero-shot test on the SAMSum test set using the pretrained model.
+    Zero-shot test on the SAMSum test set using the pretrained model.
 
     ```
     PYTHONPATH=. python ./src/main.py -mode test -data_path torch_data/samsum/samsum -log_file logs/samsum.test.log -alpha 0.95 -test_from models/pretrain/model_step_250000.pt -result_path results/samsum/samsum -visible_gpus 0 -min_length 15 -beam_size 3 -test_batch_ex_size 50
     ```
 
-    * Regular test on the SAMSum test set using the best validated model.
+    Regular test on the SAMSum test set using the best validated model.
 
     ```
     PYTHONPATH=. python ./src/main.py -mode test -data_path torch_data/samsum/samsum -log_file logs/samsum.test.log -alpha 0.95 -test_from models/samsum/model_step_xxx.pt -result_path results/samsum/samsum -visible_gpus 0 -min_length 15 -beam_size 3 -test_batch_ex_size 50
     ```
 
-    * Transfer to the ADSC test set.
+    Transfer to the ADSC test set.
     ```
     PYTHONPATH=. python ./src/main.py -mode test -data_path torch_data/adsc/adsc -log_file logs/adsc.test.log -alpha 0.95 -test_from models/samsum/model_step_xxx.pt -result_path results/adsc/adsc -visible_gpus 0 -min_length 100 -beam_size 3 -test_batch_ex_size 50
     ```
