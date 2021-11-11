@@ -108,18 +108,16 @@ All the datastes used in our work are available at [Google Drive](https://drive.
 
 ## Citation
 
-	@ARTICLE{2021arXiv210904080Z,
-             author = {Zou, Yicheng and Zhu, Bolin and Hu, Xingwu and Gui, Tao and Zhang, Qi},
-             title = "{Low-Resource Dialogue Summarization with Domain-Agnostic Multi-Source Pretraining}",
-             journal = {arXiv e-prints},
-             keywords = {Computer Science - Computation and Language},
-             year = 2021,
-             month = sep,
-             eid = {arXiv:2109.04080},
-             pages = {arXiv:2109.04080},
-             archivePrefix = {arXiv},
-             eprint = {2109.04080},
-             primaryClass = {cs.CL},
-             adsurl = {https://ui.adsabs.harvard.edu/abs/2021arXiv210904080Z}
-            }
+	@inproceedings{
+		zou-etal-2021-low,
+    	title = "Low-Resource Dialogue Summarization with Domain-Agnostic Multi-Source Pretraining",
+    	author = "Zou, Yicheng  and Zhu, Bolin  and Hu, Xingwu  and Gui, Tao  and Zhang, Qi",
+    	booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+    	month = nov,
+    	year = "2021",
+    	address = "Online and Punta Cana, Dominican Republic",
+    	publisher = "Association for Computational Linguistics",
+    	url = "https://aclanthology.org/2021.emnlp-main.7",
+    	pages = "80--91"
+	}
 
